@@ -57,7 +57,7 @@ const getAllNotesHandler = (request, h) => {
 const getNotesByIdHandler = (request, h) => {
     const {id} = request.params;
     const targetNote = notes.filter((note) => note.id === id)[0];
-    if (targetNote !== 'undefined') {
+    if (targetNote !== undefined) {
         const response = h.response({
             status: 'success',
             data: {
