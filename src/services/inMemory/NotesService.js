@@ -1,8 +1,10 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable object-curly-spacing */
+/* eslint-disable require-jsdoc */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 
-const { nanoid } = require('nanoid');
+const {nanoid} = require('nanoid');
 const InvariantError = require('../../exceptions/InvariantError');
 const NotFoundError = require('../../exceptions/NotFoundError');
 const ClientError = require('../../exceptions/ClientError');
@@ -12,7 +14,7 @@ class NotesService {
     this._notes = [];
   }
 
-  addNote({ title, body, tags }) {
+  addNote({title, body, tags}) {
     const id = nanoid(16);
     const createdAt = new Date().toISOString();
     const updatedAt = createdAt;
